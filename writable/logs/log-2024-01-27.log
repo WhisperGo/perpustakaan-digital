@@ -1,0 +1,170 @@
+CRITICAL - 2024-01-27 13:08:07 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(11): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:08:10 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(11): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:08:28 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(11): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:08:41 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(11): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:11:33 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(11): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:11:34 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(11): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:30 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:31 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:32 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:32 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:33 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:40 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:51 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:18:52 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:19:07 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:21:36 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-27 13:24:19 --> syntax error, unexpected '@', expecting ')'
+#0 C:\xampp\htdocs\projek2\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\projek2\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/partial/...', Array, true)
+#2 C:\xampp\htdocs\projek2\app\Controllers\Home.php(13): view('hopeui/partial/...')
+#3 C:\xampp\htdocs\projek2\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\xampp\htdocs\projek2\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\xampp\htdocs\projek2\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\projek2\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\projek2\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
