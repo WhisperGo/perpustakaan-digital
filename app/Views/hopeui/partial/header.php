@@ -3,10 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hope UI | Responsive Bootstrap 5 Admin Dashboard Template</title>
+  <title><?=$title?></title>
   
   <!-- Favicon -->
-  <link rel="shortcut icon" href="<?=base_url('assets/images/favicon.ico')?>" />
+  <!-- <link rel="shortcut icon" href="<?=base_url('assets/images/favicon.ico')?>" /> -->
+  <link rel="shortcut icon" href="<?=base_url('logo/favicon/favicon_contoh.svg')?>" />
   
   <!-- Library / Plugin Css Build -->
   <link rel="stylesheet" href="<?=base_url('assets/css/core/libs.min.css')?>" />
