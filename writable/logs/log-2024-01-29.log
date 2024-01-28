@@ -1,0 +1,53 @@
+CRITICAL - 2024-01-29 00:45:17 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Views\hopeui\laporan_peminjaman\print_windows_view.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 48, Array)
+#1 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/laporan_...', Array, true)
+#4 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Peminjaman.php(174): view('hopeui/laporan_...', Array)
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Peminjaman->export_windows()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+#7 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-29 01:04:18 --> syntax error, unexpected end of file
+#0 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/laporan_...', Array, true)
+#2 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Peminjaman.php(174): view('hopeui/laporan_...', Array)
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Peminjaman->export_windows()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-29 01:27:16 --> Class 'App\Controllers\M_absensi_sekolah' not found
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Peminjaman->export_pdf()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-29 01:47:03 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Peminjaman.php(249): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 249, Array)
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Peminjaman->export_excel()
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-29 01:47:19 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Peminjaman->export_excel()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-29 01:47:50 --> count(): Parameter must be an array or an object that implements Countable
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parame...', 'C:\\xampp\\htdocs...', 286, Array)
+#1 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Peminjaman.php(286): count(NULL)
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Peminjaman->export_excel()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peminjaman))
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}

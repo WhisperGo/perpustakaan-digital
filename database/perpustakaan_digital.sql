@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jan 2024 pada 17.35
+-- Waktu pembuatan: 28 Jan 2024 pada 19.52
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -43,7 +43,7 @@ CREATE TABLE `buku` (
 --
 
 INSERT INTO `buku` (`id_buku`, `judul_buku`, `cover_buku`, `kategori_buku`, `stok_buku`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Dilan 1990', 'cover_Dilan 1990_1706444053.jpg', 4, '7', '2024-01-28 18:30:40', '2024-01-28 19:14:46', NULL),
+(1, 'Dilan 1990', 'cover_Dilan 1990_1706444053.jpg', 4, '11', '2024-01-28 18:30:40', '2024-01-28 19:14:46', NULL),
 (2, 'Why? Sports Science', 'cover_1_1706449126.jpg', 9, '6', '2024-01-28 20:38:46', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -240,24 +240,11 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id_peminjaman`, `buku`, `stok_buku`, `user`, `tgl_peminjaman`, `tgl_pengembalian`, `status_peminjaman`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(7, 1, 1, 3, '2024-01-28', '2024-01-29', 1, '2024-01-28 23:19:42', '2024-01-28 23:24:06', '2024-01-28 23:24:06'),
-(8, 1, 1, 1, '2024-01-28', '2024-01-30', 1, '2024-01-28 23:28:14', NULL, NULL);
+(13, 1, 1, 1, '2024-01-28', '2024-01-29', 1, '2024-01-28 23:54:25', NULL, NULL);
 
 --
 -- Trigger `peminjaman`
 --
-DELIMITER $$
-CREATE TRIGGER `delete_book_stock` AFTER DELETE ON `peminjaman` FOR EACH ROW BEGIN
-    IF OLD.status_peminjaman = 1 THEN
-        -- Tambahkan kembali stok_buku di tabel buku saat peminjaman dihapus
-        UPDATE buku SET stok_buku = stok_buku + OLD.stok_buku WHERE id_buku = OLD.buku;
-    ELSEIF OLD.status_peminjaman = 2 THEN
-        -- Kurangi kembali stok_buku di tabel buku saat peminjaman dihapus
-        UPDATE buku SET stok_buku = stok_buku - OLD.stok_buku WHERE id_buku = OLD.buku;
-    END IF;
-END
-$$
-DELIMITER ;
 DELIMITER $$
 CREATE TRIGGER `update_book_stock` AFTER INSERT ON `peminjaman` FOR EACH ROW BEGIN
     DECLARE stock_difference INT;
@@ -513,7 +500,7 @@ ALTER TABLE `peminjam`
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `petugas`

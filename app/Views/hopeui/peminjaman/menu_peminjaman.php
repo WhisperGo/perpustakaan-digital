@@ -45,17 +45,26 @@
                              <?php endif; ?>
                           </td>
                           <td>
+                           <?php if ($riz->status_peminjaman == 2): ?>
+                             <!-- Jika status_peminjaman = 2, maka tombol aksi_edit di-disable -->
+                             <button class="btn btn-primary my-1 disabled" ><i class="fa-regular fa-rotate-left" style="color: #ffffff;"></i></button>
+                          <?php else: ?>
+                             <!-- Jika status_peminjaman bukan 2, maka tombol aksi_edit aktif -->
                              <a href="<?php echo base_url('peminjaman/aksi_edit/'. $riz->id_peminjaman)?>" class="btn btn-primary my-1"><i class="fa-regular fa-rotate-left" style="color: #ffffff;"></i></a>
+                          <?php endif; ?>
 
-                             <?php if ($riz->status_peminjaman == 1): ?>
-                               <button class="btn btn-danger my-1 disabled" ><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
-                            <?php else: ?>
-                               <a href="<?php echo base_url('peminjaman/delete/'. $riz->id_peminjaman)?>" class="btn btn-danger my-1"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></a>
-                            <?php endif; ?>
-                         </td>
-                      </tr>
-                   <?php } ?>
-                </tbody>
+                          <?php if ($riz->status_peminjaman == 1): ?>
+                             <!-- Jika status_peminjaman = 1, maka tombol delete di-disable -->
+                             <button class="btn btn-danger my-1 disabled" ><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
+                          <?php else: ?>
+                             <!-- Jika status_peminjaman bukan 1, maka tombol delete aktif -->
+                             <a href="<?php echo base_url('peminjaman/delete/'. $riz->id_peminjaman)?>" class="btn btn-danger my-1"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></a>
+                          <?php endif; ?>
+                       </td>
+
+                    </tr>
+                 <?php } ?>
+              </tbody>
               <!--  <tfoot>
                   <tr>
                      <th>No.</th>

@@ -55,6 +55,7 @@ class M_peminjaman extends Model
 		->join('buku', 'buku.id_buku = peminjaman.buku')
 		->join('user', 'user.id_user = peminjaman.user')
 		->where('peminjaman.buku', $id)
+		->where('peminjaman.deleted_at', null)
 		->orderBy('peminjaman.created_at', 'DESC')
 		->get()
 		->getResult();
@@ -70,6 +71,22 @@ class M_peminjaman extends Model
         // Mengembalikan satu baris data stok buku masuk
 		return $query->getRow();
 	}
+
+	public function getAllPeminjamanInRange($tanggal_awal, $tanggal_akhir)
+	{
+		return $this->db->table('peminjaman')
+		->select('peminjaman.*, buku.*, user.*') 
+		->select('peminjaman.stok_buku AS stok_buku_peminjaman') 
+		->join('buku', 'buku.id_buku = peminjaman.buku')
+		->join('user', 'user.id_user = peminjaman.user')
+		->where('peminjaman.tgl_peminjaman >=', $tanggal_awal)
+		->where('peminjaman.tgl_peminjaman <=', $tanggal_akhir)
+		->where('peminjaman.deleted_at', null)
+		->orderBy('peminjaman.created_at', 'DESC')
+		->get()
+		->getResult();
+	}
+
 
 
 

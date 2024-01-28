@@ -2,6 +2,9 @@
 
 namespace App\Controllers;
 use App\Models\M_peminjaman;
+use Dompdf\Dompdf;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class Peminjaman extends BaseController
 {
@@ -124,10 +127,204 @@ class Peminjaman extends BaseController
     { 
         if (session()->get('level') == 1 || session()->get('level') == 2) {
             $model=new M_peminjaman();
-            $model->deletee($id);
-            return redirect()->to('peminjaman');
+
+            $stok_keluar = $model->getBukuByIdPeminjaman($id);
+            $id_buku = $stok_keluar->buku;
+
+            $where = array('id_peminjaman' => $id);
+            $model->hapus('peminjaman', $where);
+
+            return redirect()->to('peminjaman/menu_peminjaman/' . $id_buku);
         }else {
             return redirect()->to('/');
         }
     }
+
+
+    // --------------------------------------- PRINT LAPORAN --------------------------------------
+
+    public function menu_laporan()
+    {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
+            $model=new M_peminjaman();
+
+            $data['title'] = 'Laporan Peminjaman';
+            $data['desc'] = 'Anda dapat mengprint Data Peminjaman di Menu ini.';      
+            $data['subtitle'] = 'Print Laporan Peminjaman';      
+
+            echo view('hopeui/partial/header', $data);
+            echo view('hopeui/partial/side_menu');
+            echo view('hopeui/partial/top_menu');
+            echo view('hopeui/laporan_peminjaman/menu_laporan', $data);
+            echo view('hopeui/partial/footer');
+        }else {
+            return redirect()->to('/');
+        }
+    }
+
+    public function export_windows()
+    {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
+            $model = new M_peminjaman();
+
+            $awal = $this->request->getPost('awal');
+            $akhir = $this->request->getPost('akhir');
+
+            // Get data absensi kantor berdasarkan filter
+            $data['peminjaman'] = $model->getAllPeminjamanInRange($awal, $akhir);
+            $data['title'] = 'Laporan Peminjaman Buku';
+            echo view('hopeui/partial/header', $data);
+            echo view('hopeui/laporan_peminjaman/print_windows_view', $data);
+            echo view('hopeui/partial/footer_print');  
+        } else {
+            return redirect()->to('/');
+        }
+    }
+
+    public function export_pdf()
+    {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
+            $model = new M_peminjaman();
+
+            $awal = $this->request->getPost('awal');
+            $akhir = $this->request->getPost('akhir');
+
+            // Get data absensi kantor berdasarkan filter
+            $data['peminjaman'] = $model->getAllPeminjamanInRange($awal, $akhir);
+
+            // Load the dompdf library
+            $dompdf = new Dompdf();
+
+            // Set the HTML content for the PDF
+            $data['title'] = 'Laporan Peminjaman Buku';
+            $dompdf->loadHtml(view('hopeui/laporan_peminjaman/print_pdf_view',$data));
+            $dompdf->setPaper('A4','landscape');
+            $dompdf->render();
+            
+            // Generate file name with start and end date
+            $file_name = 'laporan_peminjaman_' . str_replace('-', '', $awal) . '_' . str_replace('-', '', $akhir) . '.pdf';
+
+            // Output the generated PDF (inline or attachment)
+            $dompdf->stream($file_name, ['Attachment' => 0]);
+
+        } else {
+            return redirect()->to('/');
+        }
+    }
+
+    public function export_excel()
+    {
+        if (session()->get('level') == 1 || session()->get('level') == 2) {
+            $model = new M_peminjaman();
+
+            $awal = $this->request->getPost('awal');
+            $akhir = $this->request->getPost('akhir');
+
+            $peminjaman = $model->getAllPeminjamanInRange($awal, $akhir);
+
+            $spreadsheet = new Spreadsheet();
+
+            // Get the active worksheet and set the default row height for header row
+            $sheet = $spreadsheet->getActiveSheet();
+            $sheet->getDefaultRowDimension()->setRowHeight(20);
+
+            // Set the title and period in merged cells
+            $sheet->mergeCells('A1:G1');
+            $sheet->setCellValue('A1', 'Laporan Peminjaman Buku');
+            $sheet->mergeCells('A3:D3');
+            $sheet->setCellValue('A3', 'Periode: ' . $awal . ' - ' . $akhir);
+
+            // Set the header row values
+            $sheet->setCellValueByColumnAndRow(1, 4, 'No');
+            $sheet->setCellValueByColumnAndRow(2, 4, 'Judul Buku');
+            $sheet->setCellValueByColumnAndRow(3, 4, 'Jumlah Pinjam');
+            $sheet->setCellValueByColumnAndRow(4, 4, 'Peminjam');
+            $sheet->setCellValueByColumnAndRow(5, 4, 'Tgl. Peminjaman');
+            $sheet->setCellValueByColumnAndRow(6, 4, 'Tgl. Pengembalian');
+            $sheet->setCellValueByColumnAndRow(7, 4, 'Status Peminjaman');
+
+            // Fill the data into the worksheet
+            $row = 5;
+            $no = 1;
+            foreach ($peminjaman as $riz) {
+                $sheet->setCellValueByColumnAndRow(1, $row, $no++);
+                $sheet->setCellValueByColumnAndRow(2, $row, $riz->judul_buku);
+                $sheet->setCellValueByColumnAndRow(3, $row, $riz->stok_buku_peminjaman . ' buah');
+                $sheet->setCellValueByColumnAndRow(4, $row, $riz->username);
+                $sheet->setCellValueByColumnAndRow(5, $row, date('d F Y', strtotime($riz->tgl_peminjaman)));
+                $sheet->setCellValueByColumnAndRow(6, $row, date('d F Y', strtotime($riz->tgl_pengembalian)));
+                
+                $status_peminjaman = '';
+
+                if ($riz->status_peminjaman == 1) {
+                    $status_peminjaman = 'Dipinjam';
+                } elseif ($riz->status_peminjaman == 2) {
+                    $status_peminjaman = 'Dikembalikan';
+                }
+
+                $sheet->setCellValueByColumnAndRow(7, $row, $status_peminjaman);
+
+                // Apply background color based on the value of "Status_1"
+                $status_1 = $riz->status_peminjaman;
+                $color = '';
+                switch ($status_1) {
+                    case '2':
+                    $color = '92D050'; // Green
+                    break;
+                    case '1':
+                    $color = 'C00000'; // Yellow
+                    break;
+                }
+
+                if (!empty($color)) {
+                    $sheet->getStyle('G' . $row)->getFill()
+                    ->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+                    ->getStartColor()->setARGB($color);
+                }
+
+                $row++;
+            }
+
+        // Apply the Excel styling
+            $sheet->getStyle('A1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A1')->getFont()->setSize(14)->setBold(true);
+            $sheet->getStyle('A3')->getFont()->setBold(true);
+            $sheet->getStyle('A1:G1')->getFont()->setBold(true);
+            $sheet->getStyle('A1:G1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('FFFFFF00');
+
+            $styleArray = [
+                'borders' => [
+                    'allBorders' => [
+                        'borderStyle' => \PhpOffice\PhpSpreadsheet\Style\Border::BORDER_THIN,
+                        'color' => ['argb' => 'FF000000'],
+                    ],
+                ],
+            ];
+
+        $lastRow = count($peminjaman) + 4; // Add 4 for the header rows
+        $sheet->getStyle('A4:G' . $lastRow)->applyFromArray($styleArray);
+
+        $sheet->getColumnDimension('A')->setAutoSize(true);
+        $sheet->getColumnDimension('B')->setAutoSize(true);
+        $sheet->getColumnDimension('C')->setAutoSize(true);
+        $sheet->getColumnDimension('D')->setAutoSize(true);
+        $sheet->getColumnDimension('E')->setAutoSize(true);
+        $sheet->getColumnDimension('F')->setAutoSize(true);
+        $sheet->getColumnDimension('G')->setAutoSize(true);
+
+        // Generate file name with start and end date
+        $file_name = 'laporan_peminjaman_' . str_replace('-', '', $awal) . '_' . str_replace('-', '', $akhir) . '.xlsx';
+
+        // Create the Excel writer and save the file
+        $writer = new Xlsx($spreadsheet);
+        $filename = $file_name;
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename="' . $filename . '"');
+        header('Cache-Control: max-age=0');
+        $writer->save('php://output');
+    } else {
+        return redirect()->to('/');
+    }
+}
+
 }

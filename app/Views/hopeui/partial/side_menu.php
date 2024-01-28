@@ -97,164 +97,72 @@ $uri = service('uri');
           </li>
 
           <li class="nav-item">
-            <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
+            <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman" && $uri->getSegment(2) !== "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
             </a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-widget" role="button" aria-expanded="false" aria-controls="sidebar-widget"><i class="fa-light fa-file-invoice"></i><span class="item-name">Laporan</span>
-              <i class="right-icon">
-                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </i>
+            <a class="nav-link <?php if($uri->getSegment(2) == "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman/menu_laporan')?>"><i class="fa-light fa-file-invoice"></i><span class="item-name">Laporan Peminjaman</span>
             </a>
-            <ul class="sub-nav collapse" id="sidebar-widget" data-bs-parent="#sidebar-menu">
-              <li class="nav-item">
-                <a class="nav-link " href="../dashboard/widget/widgetbasic.html">
-                  <i class="icon">
-                    <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                      <g>
-                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                      </g>
-                    </svg>
-                  </i>
-                  <i class="sidenav-mini-icon"><i class="fa-regular fa-print"></i></i>
-                  <span class="item-name">Windows Print</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="../dashboard/widget/widgetchart.html">
-                  <i class="icon">
-                    <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                      <g>
-                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                      </g>
-                    </svg>
-                  </i>
-                  <i class="sidenav-mini-icon"><i class="fa-regular fa-file-excel"></i></i>
-                  <span class="item-name">Excel</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="../dashboard/widget/widgetcard.html">
-                  <i class="icon">
-                    <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                      <g>
-                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                      </g>
-                    </svg>
-                  </i>
-                  <i class="sidenav-mini-icon"><i class="fa-regular fa-file-pdf"></i></i>
-                  <span class="item-name">PDF</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="nav-item mb-5">
           </li>
 
         </ul>
-      </div>
-    </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
 
 
 
 
-    <!-- ------------------------------- MENU PETUGAS ------------------------------------- -->
+<!-- ------------------------------- MENU PETUGAS ------------------------------------- -->
 
-  <?php }else if (session()->get('level')==2){ ?>
-    <div class="sidebar-body pt-0 data-scrollbar">
-      <div class="sidebar-list">
-        <!-- Sidebar Menu Start -->
-        <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
-          <li class="nav-item static-item">
-            <a class="nav-link static-item disabled" tabindex="-1">
-              <span class="default-icon">Home</span>
-              <!-- <span class="mini-icon">-</span> -->
-            </a>
-          </li>
+<?php }else if (session()->get('level')==2){ ?>
+  <div class="sidebar-body pt-0 data-scrollbar">
+    <div class="sidebar-list">
+      <!-- Sidebar Menu Start -->
+      <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
+        <li class="nav-item static-item">
+          <a class="nav-link static-item disabled" tabindex="-1">
+            <span class="default-icon">Home</span>
+            <!-- <span class="mini-icon">-</span> -->
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>" href="<?=base_url('dashboard')?>"><i class="faj-button fa-duotone fa-grid-2"></i><span class="item-name">Dashboard</span>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>" href="<?=base_url('dashboard')?>"><i class="faj-button fa-duotone fa-grid-2"></i><span class="item-name">Dashboard</span>
+          </a>
+        </li>
 
-          <li><hr class="hr-horizontal"></li>
-          <li class="nav-item static-item">
-            <a class="nav-link static-item disabled" tabindex="-1">
-              <span class="default-icon">Data Perpustakaan</span>
-              <!-- <span class="mini-icon">-</span> -->
-            </a>
-          </li>
+        <li><hr class="hr-horizontal"></li>
+        <li class="nav-item static-item">
+          <a class="nav-link static-item disabled" tabindex="-1">
+            <span class="default-icon">Data Perpustakaan</span>
+            <!-- <span class="mini-icon">-</span> -->
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link <?php if($uri->getSegment(1) == "buku"){echo "active";}?>" href="<?=base_url('buku')?>"><i class="fa-solid fa-books"></i><span class="item-name">Data Buku</span>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "buku"){echo "active";}?>" href="<?=base_url('buku')?>"><i class="fa-solid fa-books"></i><span class="item-name">Data Buku</span>
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
-            </a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
+          </a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#sidebar-widget" role="button" aria-expanded="false" aria-controls="sidebar-widget"><i class="fa-light fa-file-invoice"></i><span class="item-name">Laporan</span>
-              <i class="right-icon">
-                <svg class="icon-18" xmlns="http://www.w3.org/2000/svg" width="18" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </i>
-            </a>
-            <ul class="sub-nav collapse" id="sidebar-widget" data-bs-parent="#sidebar-menu">
-              <li class="nav-item">
-                <a class="nav-link " href="../dashboard/widget/widgetbasic.html">
-                  <i class="icon">
-                    <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                      <g>
-                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                      </g>
-                    </svg>
-                  </i>
-                  <i class="sidenav-mini-icon"><i class="fa-regular fa-print"></i></i>
-                  <span class="item-name">Windows Print</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="../dashboard/widget/widgetchart.html">
-                  <i class="icon">
-                    <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                      <g>
-                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                      </g>
-                    </svg>
-                  </i>
-                  <i class="sidenav-mini-icon"><i class="fa-regular fa-file-excel"></i></i>
-                  <span class="item-name">Excel</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link " href="../dashboard/widget/widgetcard.html">
-                  <i class="icon">
-                    <svg class="icon-10" xmlns="http://www.w3.org/2000/svg" width="10" viewBox="0 0 24 24" fill="currentColor">
-                      <g>
-                        <circle cx="12" cy="12" r="8" fill="currentColor"></circle>
-                      </g>
-                    </svg>
-                  </i>
-                  <i class="sidenav-mini-icon"><i class="fa-regular fa-file-pdf"></i></i>
-                  <span class="item-name">PDF</span>
-                </a>
-              </li>
-            </ul>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(2) == "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman/menu_laporan')?>"><i class="fa-light fa-file-invoice"></i><span class="item-name">Laporan Peminjaman</span>
+          </a>
+        </li>
 
-          <li class="nav-item mb-5">
-          </li>
+      </ul>
+    </li>
 
-        </ul>
-      </div>
-    </div>
+  </ul>
+</div>
+</div>
 
-    <?php } ?>
+<?php } ?>
