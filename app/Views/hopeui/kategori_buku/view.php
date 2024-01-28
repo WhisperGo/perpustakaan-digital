@@ -15,10 +15,9 @@
                      <thead>
                         <tr>
                            <th>No.</th>
-                           <th>Foto</th>
-                           <th>Username</th>
-                           <th>Level</th>
-                           <!-- <th style="min-width: 100px">Action</th> -->
+                           <th>Judul Kategori</th>
+                           <th>Deskripsi Kategori</th>
+                           <th style="min-width: 100px">Action</th>
                         </tr>
                      </thead>
 
@@ -26,22 +25,27 @@
                         <?php
                         $no=1;
                         foreach ($jojo as $riz) {
-                          ?>
-                          <tr>
+                         ?>
+                         <tr>
                            <td><?= $no++ ?></td>
-                           <td style="width: 100px; height: 100px; overflow: hidden; border-radius: 5px;">
-                             <img src="<?= base_url('profile/' . $riz->foto) ?>" style="width: 100%; height: 100%; object-fit: contain;">
-                          </td>
-                          <td><?php echo $riz->username ?></td>
-                          <td><?php echo $riz->nama_level ?></td>
-                          <!-- <td>
-                           <a href="<?php echo base_url('data_siswa/edit_siswa/'. $b->user)?>" class="btn btn-warning my-1"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></a>
+                           <td><?php echo $riz->nama_kategori ?></td>
 
-                           <a href="<?php echo base_url('data_siswa/delete_siswa/'. $b->user)?>" class="btn btn-danger my-1"><i class="fa-solid fa-trash"></i></a>
-                        </td> -->
-                     </tr>
-                  <?php } ?>
-               </tbody>
+                           <td>
+                             <?php if ($riz->deskripsi_kategori !== null): ?>
+                               <?= $riz->deskripsi_kategori ?>
+                            <?php else: ?>
+                               -
+                            <?php endif; ?>
+                         </td>
+
+                       <td>
+                        <a href="<?php echo base_url('kategori_buku/edit/'. $riz->id_kategori)?>" class="btn btn-warning my-1"><i class="fa-solid fa-pen-to-square" style="color: #ffffff;"></i></a>
+
+                        <a href="<?php echo base_url('kategori_buku/delete/'. $riz->id_kategori)?>" class="btn btn-danger my-1"><i class="fa-solid fa-trash"></i></a>
+                     </td>
+                  </tr>
+               <?php } ?>
+            </tbody>
               <!--  <tfoot>
                   <tr>
                      <th>No.</th>

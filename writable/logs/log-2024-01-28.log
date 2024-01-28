@@ -105,3 +105,17 @@ CRITICAL - 2024-01-28 13:31:21 --> syntax error, unexpected end of file
 #6 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #7 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #8 {main}
+CRITICAL - 2024-01-28 15:56:28 --> Too few arguments to function App\Controllers\Kategori_buku::edit(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Kategori_buku->edit()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori_buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 15:56:39 --> Too few arguments to function App\Controllers\Kategori_buku::edit(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Kategori_buku->edit()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kategori_buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

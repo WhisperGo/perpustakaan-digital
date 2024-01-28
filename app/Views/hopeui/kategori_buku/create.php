@@ -13,7 +13,7 @@
                      <div class="row">
                         <div class="form-group">
                            <label class="form-label" for="fname">Judul Kategori:</label>
-                           <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" placeholder="Masukkan Judul Kategori">
+                           <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" placeholder="Masukkan Judul Kategori" required>
                         </div>
                         <div class="form-group col-md-12 mt-2">
                            <label class="form-label" for="fname">Deskripsi Kategori (Opsional):</label>
