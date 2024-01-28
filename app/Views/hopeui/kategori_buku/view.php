@@ -3,11 +3,11 @@
       <div class="col-sm-12">
          <div class="card">
 
-            <!-- <div class="card-header d-flex justify-content-between">
+            <div class="card-header d-flex justify-content-between">
                <div class="header-title">
-                  <h4 class="card-title">Bootstrap Datatables</h4>
+                  <a href="<?=base_url('kategori_buku/create')?>" class="btn btn-primary"><i class="faj-button fa-solid fa-plus"></i>Tambah</a>
                </div>
-            </div> -->
+            </div>
 
             <div class="card-body">
                <div class="table-responsive">

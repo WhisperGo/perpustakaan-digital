@@ -89,13 +89,13 @@ class Login extends BaseController
         }else {
             // Tambahkan peringatan username atau password salah
             session()->setFlashdata('error', ' Username atau password Anda salah');
-            return redirect()->to('login');
+            return redirect()->to('/');
         }
     }
 
     public function log_out()
     {
         session()->destroy();
-        return redirect()->to('login');
+        return redirect()->to('/');
     }
 }

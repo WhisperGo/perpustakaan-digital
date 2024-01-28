@@ -1,5 +1,5 @@
 <!-- Footer Section Start -->
-      <footer class="footer">
+      <!-- <footer class="footer">
           <div class="footer-body">
               <ul class="left-panel list-inline mb-0 p-0">
                   <li class="list-inline-item"><a href="../dashboard/extra/privacy-policy.html">Privacy Policy</a></li>
@@ -14,7 +14,7 @@
                   </span> by <a href="https://iqonic.design/">IQONIC Design</a>.
               </div>
           </div>
-      </footer>
+      </footer> -->
       <!-- Footer Section End -->    </main>
     <a class="btn btn-fixed-end btn-warning btn-icon btn-setting" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" role="button" aria-controls="offcanvasExample">
       <svg width="24" viewBox="0 0 24 24" class="animated-rotate icon-24" fill="none" xmlns="http://www.w3.org/2000/svg">

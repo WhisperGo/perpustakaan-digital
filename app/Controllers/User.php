@@ -12,13 +12,14 @@ class User extends BaseController
             $on='user.level=level.id_level';
             $data['jojo']=$model->join2('user', 'level', $on);
             $data['title']='Menu User';
+            $data['desc']='Anda dapat melihat Data User di Menu ini.';
             echo view('hopeui/partial/header', $data);
             echo view('hopeui/partial/side_menu');
             echo view('hopeui/partial/top_menu', $data);
             echo view('hopeui/user/view', $data);
             echo view('hopeui/partial/footer');
         }else {
-            return redirect()->to('login');
+            return redirect()->to('/');
 
         }
     }
@@ -38,7 +39,7 @@ class User extends BaseController
 
             return redirect()->to('agendapkl/user');
         }else {
-            return redirect()->to('agendapkl/login');
+            return redirect()->to('/');
 
         }
     }
