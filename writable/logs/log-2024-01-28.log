@@ -1,0 +1,77 @@
+ERROR - 2024-01-28 10:06:05 --> Error connecting to the database: Unknown database 'projek2'
+CRITICAL - 2024-01-28 10:06:05 --> Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'projek2'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\perpustakaan-digital\app\Models\M_login.php(18): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Login.php(83): App\Models\M_login->getLoginWithPassword('user', '', NULL)
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Login->aksi_login()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#6 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2024-01-28 11:42:55 --> syntax error, unexpected ';', expecting identifier (T_STRING)
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:03 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:03 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:04 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:04 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:04 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:04 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 11:43:04 --> syntax error, unexpected '\' (T_NS_SEPARATOR), expecting identifier (T_STRING) or '{'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('user')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('user')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

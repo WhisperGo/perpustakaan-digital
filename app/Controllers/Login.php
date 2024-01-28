@@ -18,9 +18,9 @@ class Login extends BaseController
         }
 
         $data['title']='Login';
-        echo view ('hopeui/partial/header', $data);
+        echo view ('hopeui/partial_login/header', $data);
         echo view('hopeui/auth/login');
-        echo view('hopeui/partial/footer');
+        echo view('hopeui/partial_login/footer');
     }
 
     public function aksi_login()
@@ -85,7 +85,6 @@ class Login extends BaseController
             session()->set('id', $cek['id_user']);
             session()->set('username', $cek['username']);
             session()->set('level', $cek['level']);
-            session()->set('jenjang', $cek['jenjang']);
             return redirect()->to('dashboard');
         }else {
             // Tambahkan peringatan username atau password salah

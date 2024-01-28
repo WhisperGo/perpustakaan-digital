@@ -29,6 +29,15 @@
   
   <!-- RTL Css -->
   <link rel="stylesheet" href="<?=base_url('assets/css/rtl.min.css')?>"/>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="<?=base_url('assets/extensions/@fortawesome/fontawesome-pro/css/all.min.css')?>">
+
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="<?=base_url('assets/custom/custom_style.css')?>">
   
 </head>
 
