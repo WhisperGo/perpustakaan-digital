@@ -119,3 +119,302 @@ CRITICAL - 2024-01-28 15:56:39 --> Too few arguments to function App\Controllers
 #3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #5 {main}
+CRITICAL - 2024-01-28 18:29:22 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 18:29:44 --> Call to a member function isValid() on null
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 19:02:20 --> Invalid argument supplied for foreach()
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Views\hopeui\buku\edit.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\xampp\\htdocs...', 29, Array)
+#1 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/edi...', Array, true)
+#4 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(102): view('hopeui/buku/edi...', Array)
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->edit('1')
+#6 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#7 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2024-01-28 19:39:17 --> Cannot redeclare App\Controllers\Buku::aksi_create()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2024-01-28 19:44:57 --> Unknown column 'stok_buku' in 'field list'
+ERROR - 2024-01-28 20:00:04 --> Unknown column 'stok_buku' in 'field list'
+ERROR - 2024-01-28 20:00:53 --> Unknown column 'stok_buku' in 'field list'
+ERROR - 2024-01-28 20:27:13 --> Unknown column 'id_buku' in 'where clause'
+CRITICAL - 2024-01-28 20:27:13 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(178): App\Models\M_buku->getWhere('buku_masuk', Array)
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok('1')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 20:31:55 --> syntax error, unexpected '$data' (T_VARIABLE)
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('buku/info_stok/...')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('buku/info_stok/...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 20:34:43 --> Could not move file php47D3.tmp to cover/ ()
+#0 C:\xampp\htdocs\perpustakaan-digital\system\HTTP\Files\UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('php47D3.tmp', 'cover/', '')
+#1 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(65): CodeIgniter\HTTP\Files\UploadedFile->move('cover/', 'cover_Why? Olah...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-28 20:35:21 --> Could not move file phpDA70.tmp to cover/ ()
+#0 C:\xampp\htdocs\perpustakaan-digital\system\HTTP\Files\UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpDA70.tmp', 'cover/', '')
+#1 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(65): CodeIgniter\HTTP\Files\UploadedFile->move('cover/', 'cover_Why? Olah...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-28 20:36:15 --> Could not move file phpAEF7.tmp to cover/ ()
+#0 C:\xampp\htdocs\perpustakaan-digital\system\HTTP\Files\UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpAEF7.tmp', 'cover/', '')
+#1 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(65): CodeIgniter\HTTP\Files\UploadedFile->move('cover/', 'cover_Why? Spor...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-28 20:36:51 --> Could not move file php3D8C.tmp to cover/ ()
+#0 C:\xampp\htdocs\perpustakaan-digital\system\HTTP\Files\UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('php3D8C.tmp', 'cover/', '')
+#1 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(65): CodeIgniter\HTTP\Files\UploadedFile->move('cover/', 'cover_Why? Spor...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-28 20:37:32 --> Could not move file phpDCAB.tmp to cover/ ()
+#0 C:\xampp\htdocs\perpustakaan-digital\system\HTTP\Files\UploadedFile.php(149): CodeIgniter\HTTP\Exceptions\HTTPException::forMoveFailed('phpDCAB.tmp', 'cover/', '')
+#1 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(65): CodeIgniter\HTTP\Files\UploadedFile->move('cover/', 'cover_Why? Spor...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_create()
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2024-01-28 20:51:33 --> Too few arguments to function App\Controllers\Buku::info_stok(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 20:51:56 --> Too few arguments to function App\Controllers\Buku::add_stok(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 20:52:17 --> Too few arguments to function App\Controllers\Buku::add_stok(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 20:54:37 --> Too few arguments to function App\Controllers\Buku::add_stok(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 20:54:44 --> syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/vie...', Array, true)
+#2 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(187): view('hopeui/buku/vie...', Array)
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok('1')
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 20:55:03 --> Too few arguments to function App\Controllers\Buku::add_stok(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2024-01-28 20:56:46 --> Unknown column 'buku.id_buku' in 'where clause'
+CRITICAL - 2024-01-28 20:56:46 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(179): App\Models\M_buku->getBukuMasukByIdWithoutForeach('1')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok('1')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-28 20:57:03 --> Unknown column 'buku.id_buku' in 'where clause'
+CRITICAL - 2024-01-28 20:57:03 --> Call to a member function getRow() on bool
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(179): App\Models\M_buku->getBukuMasukByIdWithoutForeach('1')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok('1')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2024-01-28 20:59:44 --> Invalid file: hopeui/buku/view_stok.php
+#0 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hopeui/buku/vie...')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/vie...', Array, true)
+#2 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(188): view('hopeui/buku/vie...', Array)
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok('1')
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 21:04:28 --> Invalid file: hopeui/buku/add_stok.php
+#0 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hopeui/buku/add...')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/add...', Array, true)
+#2 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(234): view('hopeui/buku/add...', Array)
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok_masuk('1')
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 21:11:06 --> syntax error, unexpected '?>', expecting ')'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/vie...', Array, true)
+#2 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(300): view('hopeui/buku/vie...', Array)
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar('1')
+#4 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#5 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2024-01-28 21:12:14 --> Too few arguments to function App\Controllers\Buku::add_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:13:03 --> Too few arguments to function App\Controllers\Buku::add_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:14:39 --> Too few arguments to function App\Controllers\Buku::info_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:15:00 --> Too few arguments to function App\Controllers\Buku::info_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:15:02 --> Too few arguments to function App\Controllers\Buku::info_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:15:17 --> Too few arguments to function App\Controllers\Buku::info_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:15:20 --> Too few arguments to function App\Controllers\Buku::info_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:15:51 --> Too few arguments to function App\Controllers\Buku::info_stok_keluar(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_keluar()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:15:52 --> Too few arguments to function App\Controllers\Buku::info_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:20:12 --> Too few arguments to function App\Controllers\Buku::add_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:20:18 --> Too few arguments to function App\Controllers\Buku::add_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->add_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:21:56 --> Call to a member function getBukuMasukByIdBukuMasuk() on null
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->aksi_add_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:22:20 --> Too few arguments to function App\Controllers\Buku::info_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:22:43 --> Too few arguments to function App\Controllers\Buku::info_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:22:55 --> Too few arguments to function App\Controllers\Buku::info_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-28 21:23:27 --> Too few arguments to function App\Controllers\Buku::info_stok_masuk(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->info_stok_masuk()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}

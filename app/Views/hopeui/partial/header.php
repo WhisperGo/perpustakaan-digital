@@ -38,13 +38,18 @@
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="<?=base_url('assets/custom/custom_style.css')?>">
+
+  <!-- File Uploader -->
+    <link rel="stylesheet" href="<?=base_url('assets/extensions/filepond/filepond.css')?>" />
+    <link rel="stylesheet" href="<?=base_url('assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.css')?>"
+    />
   
 </head>
 
 <body class="  ">
   <!-- loader Start -->
-  <div id="loading">
+  <!-- <div id="loading">
     <div class="loader simple-loader">
       <div class="loader-body"></div>
-    </div>    </div>
+    </div>    </div> -->
     <!-- loader END -->

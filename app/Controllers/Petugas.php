@@ -76,8 +76,8 @@ class Kategori_buku extends BaseController
             $where=array('id_kategori'=>$id);
             $data['jojo']=$model->getWhere('kategori_buku',$where);
             $data['title'] = 'Kategori Buku';
-            $data['desc'] = 'Anda dapat mengedit Kategori Buku di Menu ini.';      
-            $data['subtitle'] = 'Edit Kategori Buku';      
+            $data['desc'] = 'Anda dapat menambah Kategori Buku di Menu ini.';      
+            $data['subtitle'] = 'Tambah Kategori Buku';      
             echo view('hopeui/partial/header', $data);
             echo view('hopeui/partial/side_menu');
             echo view('hopeui/partial/top_menu');
