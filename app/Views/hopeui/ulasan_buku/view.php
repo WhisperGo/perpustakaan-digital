@@ -1,4 +1,4 @@
- <div class="conatiner-fluid content-inner mt-n5 py-0">
+<div class="conatiner-fluid content-inner mt-n5 py-0">
    <div class="row">
       <div class="col-sm-12">
          <div class="card">
@@ -20,28 +20,31 @@
                   <input type="hidden" name="id" value="<?php echo $id ?>">
 
                   <div class="row">
-                   <div class="form-group mt-2">
+                    <div class="form-group mt-2">
                      <textarea class="form-control" name="isi_ulasan" rows="5" placeholder="Silahkan Beri Ulasan Anda" required></textarea>
                   </div>
                </div>
 
                <div class="mb-4">
-                <div class="text-center"><button type="submit" class="btn btn-success">Kirim Ulasan</button>
-                </div>
-             </div>
-          </form>
+                 <div class="text-center"><button type="submit" class="btn btn-success">Kirim Ulasan</button>
+                 </div>
+              </div>
+           </form>
 
-          <div class="row justify-content-center">
+           <div class="row justify-content-center">
+              <div class="mb-4">
+               <h3 class="mb-3">Semua Ulasan :</h3> 
+               <?php if (empty($ulasan)): ?>
+                 <p>Belum Ada Ulasan</p>
+              <?php else: ?>
+                 <?php foreach ($ulasan as $u): ?>
+                  <p><strong><?= $u->username ?></strong>: <?= $u->ulasan ?></p>
+               <?php endforeach; ?>
+            <?php endif; ?>
+         </div>
 
-           <div class="mb-4">
-            <h3 class="mb-3">Semua Ulasan :</h3> 
-            <?php foreach ($ulasan as $u): ?>
-             <p><strong><?= $u->username ?></strong>: <?= $u->ulasan ?></p>
-          <?php endforeach; ?>
-       </div>
-
-    </div>
- </div>
+      </div>
+   </div>
 </div>
 </div>
 </div>

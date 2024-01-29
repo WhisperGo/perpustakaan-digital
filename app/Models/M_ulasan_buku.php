@@ -58,7 +58,7 @@ class M_ulasan_buku extends Model
 
 	// ------------------------------------- PEMINJAM ---------------------------------------------
 
-	public function getGambarById($id)
+	public function getIdBuku($id)
 	{
         // Ambil data gambar berdasarkan id_album
 		return $this->db->table('buku')
@@ -66,6 +66,19 @@ class M_ulasan_buku extends Model
 		->get()
 		->getResult();
 	}
+
+	public function getUlasanByIdBuku($id)
+	{
+		return $this->db->table('ulasan_buku')
+		->select('ulasan_buku.*, buku.*, user.*')
+		->join('buku', 'ulasan_buku.buku = buku.id_buku')
+		->join('user', 'ulasan_buku.user = user.id_user')
+		->where('ulasan_buku.buku', $id)
+		->where('ulasan_buku.deleted_at', null)
+		->get()
+		->getResult();
+	}
+
 
 
 	//CI4 Model

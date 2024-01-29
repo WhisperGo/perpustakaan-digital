@@ -22,29 +22,29 @@
                         </div>
 
                         <div class="form-group">
-                           <label class="form-label" for="fname">Kategori Buku</label>
-                           <select class="form-select" id="kategori_buku" name="kategori_buku" required>
-                              <option>- Pilih -</option>
-                              <?php 
-                              foreach ($kategori as $k) {
-                                 ?>
-                                 <option value="<?=$k->id_kategori?>"><?= $k->nama_kategori?></option>
-                              <?php } ?>
-                           </select>
-                        </div>
+                          <label class="form-label" for="kategori_buku">Kategori Buku</label>
+                          <select class="form-select" id="kategori_buku" name="kategori_buku" required>
+                            <option>- Pilih -</option>
+                            <?php foreach ($kategori as $k): ?>
+                              <?php if ($k->id_kategori != 10): ?>
+                                <option value="<?= $k->id_kategori ?>"><?= $k->nama_kategori ?></option>
+                             <?php endif; ?>
+                          <?php endforeach; ?>
+                       </select>
+                    </div>
 
-                        <div class="form-group">
-                           <label class="form-label" for="fname">Stok Buku</label>
-                           <input type="text" class="form-control" id="stok_buku" name="stok_buku" placeholder="Masukkan Stok Buku" required>
-                        </div>
+                    <div class="form-group">
+                     <label class="form-label" for="fname">Stok Buku</label>
+                     <input type="text" class="form-control" id="stok_buku" name="stok_buku" placeholder="Masukkan Stok Buku" required>
+                  </div>
 
-                     </div>
-                     <a href="javascript:history.back()" class="btn btn-danger mt-4">Cancel</a>
-                     <button type="submit" class="btn btn-primary mt-4">Submit</button>
-                  </form>
                </div>
-            </div>
+               <a href="javascript:history.back()" class="btn btn-danger mt-4">Cancel</a>
+               <button type="submit" class="btn btn-primary mt-4">Submit</button>
+            </form>
          </div>
       </div>
    </div>
+</div>
+</div>
 </div>

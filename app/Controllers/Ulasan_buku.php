@@ -11,15 +11,15 @@ class Ulasan_buku extends BaseController
         if (session()->get('level') == 3) {
             $model = new M_ulasan_buku();
 
-            $on = 'ulasan_buku.buku=buku.id_buku';
-            $on2 = 'ulasan_buku.user=user.id_user';
-            $data['ulasan'] = $model->join3('ulasan_buku', 'buku', 'user', $on, $on2);
+        // Ambil data ulasan berdasarkan id_buku
+            $data['ulasan'] = $model->getUlasanByIdBuku($id);
 
             $data['title'] = 'Ulasan Buku';
             $data['desc'] = 'Anda dapat melihat Ulasan Buku di Menu ini.';
             $data['id'] = $id;
 
-            $gambar_baru = $model->getGambarById($id);
+        // Ambil data gambar berdasarkan id_buku
+            $gambar_baru = $model->getIdBuku($id);
             $data['gambar_baru'] = $gambar_baru;
 
             echo view('hopeui/partial/header', $data);

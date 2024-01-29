@@ -425,5 +425,4 @@ public function aksi_tambah_koleksi($id)
         return redirect()->to('/');
     }
 }
-
 }

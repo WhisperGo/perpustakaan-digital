@@ -97,6 +97,11 @@ $uri = service('uri');
           </li>
 
           <li class="nav-item">
+            <a class="nav-link <?php if($uri->getSegment(1) == "buku_digital"){echo "active";}?>" href="<?=base_url('buku_digital')?>"><i class="fa-regular fa-book"></i><span class="item-name">Data Buku Digital</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
             <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman" && $uri->getSegment(2) !== "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
             </a>
           </li>
@@ -149,6 +154,11 @@ $uri = service('uri');
         </li>
 
         <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "buku_digital"){echo "active";}?>" href="<?=base_url('buku_digital')?>"><i class="fa-regular fa-book"></i><span class="item-name">Data Buku Digital</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman" && $uri->getSegment(2) !== "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
           </a>
         </li>
@@ -193,7 +203,12 @@ $uri = service('uri');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?php if($uri->getSegment(2) == "peminjam"){echo "active";}?>" href="<?=base_url('buku/peminjam')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Buku</span>
+          <a class="nav-link <?php if($uri->getSegment(1) == "buku" && $uri->getSegment(2) == "peminjam"){echo "active";}?>" href="<?=base_url('buku/peminjam')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Buku</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "buku_digital" && $uri->getSegment(2) == "peminjam"){echo "active";}?>" href="<?=base_url('buku_digital/peminjam')?>"><i class="fa-regular fa-book"></i><span class="item-name">Data Buku Digital</span>
           </a>
         </li>
 

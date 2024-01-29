@@ -38,9 +38,7 @@
                               foreach ($kategori as $k) {
                                  $selected = ($jojo->kategori_buku == $k->id_kategori) ? 'selected' : '';
                                  ?>
-                                 <?php if ($k->id_kategori != 10): ?>
-                                    <option value="<?=$k->id_kategori?>" <?=$selected?>><?= $k->nama_kategori?></option>
-                                 <?php endif; ?>
+                                 <option value="<?=$k->id_kategori?>" <?=$selected?>><?= $k->nama_kategori?></option>
                               <?php } ?>
                            </select>
                         </div>

@@ -1,5 +1,5 @@
 <div class="conatiner-fluid content-inner mt-n5 py-0">
-    <div class="row justify-content-center"> <!-- Menengahkan form -->
+    <div class="row justify-content-center">
         <div class="col-sm-12 col-lg-6">
             <div class="card">
                 <div class="card-header d-flex justify-content-between">

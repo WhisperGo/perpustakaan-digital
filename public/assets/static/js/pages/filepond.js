@@ -155,6 +155,7 @@ FilePond.create(document.querySelector(".logo-pdf"), {
   storeAsFile: true,
 })
 
+
 // Filepond: Image Preview
 FilePond.create(document.querySelector(".favicon"), {
   credits: null,

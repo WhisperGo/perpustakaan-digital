@@ -338,3 +338,21 @@ CRITICAL - 2024-01-29 21:12:35 --> Invalid argument supplied for foreach()
 #8 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #10 {main}
+ERROR - 2024-01-29 22:14:53 --> Unknown column 'kategori_buku.kategori_buku' in 'where clause'
+CRITICAL - 2024-01-29 22:14:53 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Buku.php(15): App\Models\M_buku->join2('buku', 'kategori_buku', 'buku.kategori_b...')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Buku->index()
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2024-01-29 22:43:01 --> Column 'kategori_buku' cannot be null
+CRITICAL - 2024-01-29 22:53:17 --> syntax error, unexpected ''file_buku'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 C:\xampp\htdocs\perpustakaan-digital\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('buku_digital/cr...')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(726): CodeIgniter\Router\Router->handle('buku_digital/cr...')
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
