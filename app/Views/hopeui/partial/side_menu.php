@@ -106,10 +106,20 @@ $uri = service('uri');
             </a>
           </li>
 
+          <li><hr class="hr-horizontal"></li>
+          <li class="nav-item static-item">
+            <a class="nav-link static-item disabled" tabindex="-1">
+              <span class="default-icon">Data Laporan</span>
+              <!-- <span class="mini-icon">-</span> -->
+            </a>
+          </li>
+
           <li class="nav-item">
             <a class="nav-link <?php if($uri->getSegment(2) == "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman/menu_laporan')?>"><i class="fa-light fa-file-invoice"></i><span class="item-name">Laporan Peminjaman</span>
             </a>
           </li>
+
+          <li class="nav-item mb-5"></li>
 
         </ul>
       </li>
@@ -163,10 +173,20 @@ $uri = service('uri');
           </a>
         </li>
 
+        <li><hr class="hr-horizontal"></li>
+        <li class="nav-item static-item">
+          <a class="nav-link static-item disabled" tabindex="-1">
+            <span class="default-icon">Data Laporan</span>
+            <!-- <span class="mini-icon">-</span> -->
+          </a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link <?php if($uri->getSegment(2) == "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman/menu_laporan')?>"><i class="fa-light fa-file-invoice"></i><span class="item-name">Laporan Peminjaman</span>
           </a>
         </li>
+
+        <li class="nav-item mb-5"></li>
 
       </ul>
     </li>

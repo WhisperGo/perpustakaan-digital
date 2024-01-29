@@ -89,8 +89,14 @@ class M_peminjaman extends Model
     	->getResult();
     }
 
-
-
+    public function countPeminjamanByStatus($awal, $akhir, $status)
+    {
+    	return $this->db->table('peminjaman')
+    	->where('tgl_peminjaman >=', $awal)
+    	->where('tgl_peminjaman <=', $akhir)
+    	->where('status_peminjaman', $status)
+    	->countAllResults();
+    }
 
 	//CI4 Model
     public function deletee($id)

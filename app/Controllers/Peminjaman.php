@@ -172,6 +172,11 @@ class Peminjaman extends BaseController
 
             // Get data absensi kantor berdasarkan filter
             $data['peminjaman'] = $model->getAllPeminjamanInRange($awal, $akhir);
+            
+            // Hitung jumlah peminjaman berdasarkan status
+            $data['jumlah_dipinjam'] = $model->countPeminjamanByStatus($awal, $akhir, 1); // Status Dipinjam
+            $data['jumlah_dikembalikan'] = $model->countPeminjamanByStatus($awal, $akhir, 2); // Status Dikembalikan
+
             $data['title'] = 'Laporan Peminjaman Buku';
             echo view('hopeui/partial/header', $data);
             echo view('hopeui/laporan_peminjaman/print_windows_view', $data);
@@ -180,6 +185,7 @@ class Peminjaman extends BaseController
             return redirect()->to('/');
         }
     }
+
 
     public function export_pdf()
     {
@@ -191,6 +197,8 @@ class Peminjaman extends BaseController
 
             // Get data absensi kantor berdasarkan filter
             $data['peminjaman'] = $model->getAllPeminjamanInRange($awal, $akhir);
+            $data['jumlah_dipinjam'] = $model->countPeminjamanByStatus($awal, $akhir, 1); 
+            $data['jumlah_dikembalikan'] = $model->countPeminjamanByStatus($awal, $akhir, 2); 
 
             // Load the dompdf library
             $dompdf = new Dompdf();
@@ -221,6 +229,8 @@ class Peminjaman extends BaseController
             $akhir = $this->request->getPost('akhir');
 
             $peminjaman = $model->getAllPeminjamanInRange($awal, $akhir);
+            $data['jumlah_dipinjam'] = $model->countPeminjamanByStatus($awal, $akhir, 1); 
+            $data['jumlah_dikembalikan'] = $model->countPeminjamanByStatus($awal, $akhir, 2);
 
             $spreadsheet = new Spreadsheet();
 
@@ -228,23 +238,30 @@ class Peminjaman extends BaseController
             $sheet = $spreadsheet->getActiveSheet();
             $sheet->getDefaultRowDimension()->setRowHeight(20);
 
-            // Set the title and period in merged cells
             $sheet->mergeCells('A1:G1');
             $sheet->setCellValue('A1', 'Laporan Peminjaman Buku');
-            $sheet->mergeCells('A3:D3');
-            $sheet->setCellValue('A3', 'Periode: ' . $awal . ' - ' . $akhir);
+
+            $periode = date('d F Y', strtotime($awal)) . ' - ' . date('d F Y', strtotime($akhir));
+            $sheet->mergeCells('A3:C5');
+            $sheet->setCellValue('A3', 'Periode: ' . $periode);
+
+            $sheet->setCellValue('G3', 'Jumlah peminjaman : ' . count($peminjaman));
+
+            $sheet->setCellValue('G4', 'Jumlah dipinjam : ' . $data['jumlah_dipinjam']);
+
+            $sheet->setCellValue('G5', 'Jumlah dikembalikan : ' . $data['jumlah_dikembalikan']);
 
             // Set the header row values
-            $sheet->setCellValueByColumnAndRow(1, 4, 'No');
-            $sheet->setCellValueByColumnAndRow(2, 4, 'Judul Buku');
-            $sheet->setCellValueByColumnAndRow(3, 4, 'Jumlah Pinjam');
-            $sheet->setCellValueByColumnAndRow(4, 4, 'Peminjam');
-            $sheet->setCellValueByColumnAndRow(5, 4, 'Tgl. Peminjaman');
-            $sheet->setCellValueByColumnAndRow(6, 4, 'Tgl. Pengembalian');
-            $sheet->setCellValueByColumnAndRow(7, 4, 'Status Peminjaman');
+            $sheet->setCellValueByColumnAndRow(1, 7, 'No.');
+            $sheet->setCellValueByColumnAndRow(2, 7, 'Judul Buku');
+            $sheet->setCellValueByColumnAndRow(3, 7, 'Jumlah Pinjam');
+            $sheet->setCellValueByColumnAndRow(4, 7, 'Peminjam');
+            $sheet->setCellValueByColumnAndRow(5, 7, 'Tgl. Peminjaman');
+            $sheet->setCellValueByColumnAndRow(6, 7, 'Tgl. Pengembalian');
+            $sheet->setCellValueByColumnAndRow(7, 7, 'Status Peminjaman');
 
             // Fill the data into the worksheet
-            $row = 5;
+            $row = 8;
             $no = 1;
             foreach ($peminjaman as $riz) {
                 $sheet->setCellValueByColumnAndRow(1, $row, $no++);
@@ -286,11 +303,17 @@ class Peminjaman extends BaseController
             }
 
         // Apply the Excel styling
-            $sheet->getStyle('A1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+            $sheet->getStyle('A1')->getAlignment()
+            ->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER)
+            ->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
             $sheet->getStyle('A1')->getFont()->setSize(14)->setBold(true);
+            $sheet->getStyle('A1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('FFFF00');
+
             $sheet->getStyle('A3')->getFont()->setBold(true);
-            $sheet->getStyle('A1:G1')->getFont()->setBold(true);
-            $sheet->getStyle('A1:G1')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('FFFFFF00');
+            $sheet->getStyle('A3')->getAlignment()
+            ->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER)
+            ->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+            $sheet->getStyle('A3')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)->getStartColor()->setARGB('FFFF00');
 
             $styleArray = [
                 'borders' => [
@@ -301,8 +324,8 @@ class Peminjaman extends BaseController
                 ],
             ];
 
-        $lastRow = count($peminjaman) + 4; // Add 4 for the header rows
-        $sheet->getStyle('A4:G' . $lastRow)->applyFromArray($styleArray);
+        $lastRow = count($peminjaman) + 7; // Add 4 for the header rows
+        $sheet->getStyle('A7:G' . $lastRow)->applyFromArray($styleArray);
 
         $sheet->getColumnDimension('A')->setAutoSize(true);
         $sheet->getColumnDimension('B')->setAutoSize(true);

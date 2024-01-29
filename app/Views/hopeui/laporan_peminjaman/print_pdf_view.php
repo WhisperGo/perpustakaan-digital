@@ -34,7 +34,7 @@
             margin-top: 10px;
             text-align: center;
         }
-        p {
+        .custom-paragraph {
             margin-top: 10px;
             text-align: center;
         }
@@ -51,7 +51,7 @@
 
     <h3 class="text-center mb-4"><?= $title ?></h3>
     
-    <p class="text-center">Laporan detail peminjaman buku per tanggal tertentu.</p>
+    <p class="custom-paragraph">Laporan detail peminjaman buku per tanggal tertentu.</p>
 
     <div class="table-responsive">
         <table border="1">
@@ -87,6 +87,13 @@
             </tbody>
         </table>
     </div>
+
+    <div class="jumlah-container mt-5">
+        <p>Jumlah peminjaman: <?= count($peminjaman) ?></p>
+        <p>Jumlah status buku dipinjam: <?= $jumlah_dipinjam ?></p>
+        <p>Jumlah status buku dikembalikan: <?= $jumlah_dikembalikan ?></p>
+    </div>
+
 </div>
 </body>
 </html>

@@ -41,7 +41,15 @@
         h3 {
             margin-top: 10px; /* Mengurangi margin-top h3 */
         }
-        
+        .jumlah-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .jumlah-item {
+            flex: 1;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -91,6 +99,19 @@
             </tbody>
         </table>
     </div>
+
+    <div class="jumlah-container mt-5">
+        <div class="jumlah-item">
+            <p>Jumlah peminjaman: <?= count($peminjaman) ?></p>
+        </div>
+        <div class="jumlah-item">
+            <p>Jumlah status buku dipinjam: <?= $jumlah_dipinjam ?></p>
+        </div>
+        <div class="jumlah-item">
+            <p>Jumlah status buku dikembalikan: <?= $jumlah_dikembalikan ?></p>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>

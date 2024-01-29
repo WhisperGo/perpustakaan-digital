@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 29 Jan 2024 pada 15.48
+-- Waktu pembuatan: 29 Jan 2024 pada 18.35
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -32,7 +32,8 @@ CREATE TABLE `buku` (
   `judul_buku` text NOT NULL,
   `cover_buku` text DEFAULT NULL,
   `kategori_buku` int(11) NOT NULL,
-  `stok_buku` varchar(255) NOT NULL,
+  `stok_buku` varchar(255) DEFAULT NULL,
+  `file_buku` text DEFAULT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
@@ -42,9 +43,10 @@ CREATE TABLE `buku` (
 -- Dumping data untuk tabel `buku`
 --
 
-INSERT INTO `buku` (`id_buku`, `judul_buku`, `cover_buku`, `kategori_buku`, `stok_buku`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Dilan 1990', 'cover_Dilan 1990_1706444053.jpg', 4, '11', '2024-01-28 18:30:40', '2024-01-28 19:14:46', NULL),
-(2, 'Why? Sports Science', 'cover_1_1706449126.jpg', 9, '6', '2024-01-28 20:38:46', NULL, NULL);
+INSERT INTO `buku` (`id_buku`, `judul_buku`, `cover_buku`, `kategori_buku`, `stok_buku`, `file_buku`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 'Dilan 1990', 'cover_Dilan 1990_1706444053.jpg', 4, '12', NULL, '2024-01-28 18:30:40', '2024-01-28 19:14:46', NULL),
+(2, 'Why? Sports Science', 'cover_1_1706449126.jpg', 9, '4', NULL, '2024-01-28 20:38:46', NULL, NULL),
+(5, 'Agama Buddha Kelas 12', 'cover_1_1706543651.png', 10, '1', 'buku_1_1706543651.pdf', '2024-01-29 22:54:11', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -174,7 +176,8 @@ CREATE TABLE `koleksi_buku` (
 --
 
 INSERT INTO `koleksi_buku` (`id_koleksi`, `buku`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(6, 1, 3, '2024-01-29 20:55:41', NULL, NULL);
+(6, 1, 3, '2024-01-29 20:55:41', NULL, NULL),
+(8, 5, 3, '2024-01-29 23:15:20', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -223,7 +226,8 @@ CREATE TABLE `peminjaman` (
 --
 
 INSERT INTO `peminjaman` (`id_peminjaman`, `buku`, `stok_buku`, `user`, `tgl_peminjaman`, `tgl_pengembalian`, `status_peminjaman`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(13, 1, 1, 1, '2024-01-28', '2024-01-29', 1, '2024-01-28 23:54:25', NULL, NULL);
+(13, 1, 1, 1, '2024-01-28', '2024-01-29', 2, '2024-01-28 23:54:25', NULL, NULL),
+(16, 2, 2, 3, '2024-01-29', '2024-01-31', 1, '2024-01-29 23:51:05', NULL, NULL);
 
 --
 -- Trigger `peminjaman`
@@ -415,7 +419,7 @@ ALTER TABLE `website`
 -- AUTO_INCREMENT untuk tabel `buku`
 --
 ALTER TABLE `buku`
-  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_buku` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `buku_keluar`
@@ -439,7 +443,7 @@ ALTER TABLE `kategori_buku`
 -- AUTO_INCREMENT untuk tabel `koleksi_buku`
 --
 ALTER TABLE `koleksi_buku`
-  MODIFY `id_koleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_koleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `level`
@@ -451,13 +455,13 @@ ALTER TABLE `level`
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
-  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT untuk tabel `ulasan_buku`
 --
 ALTER TABLE `ulasan_buku`
-  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
