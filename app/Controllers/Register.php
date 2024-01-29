@@ -48,7 +48,7 @@ class Register extends BaseController
             // Verifikasi CAPTCHA menggunakan Google reCAPTCHA API
         $url = 'https://www.google.com/recaptcha/api/siteverify';
         $data = [
-            'secret' => '6LddmYknAAAAAIDcpmBFvibeWevhQFsEVuX75VqD',
+            'secret' => '6LcEfuojAAAAAHEty4frYz3AtlZ39sx7OsvHVT5K',
             'response' => $captcha_response,
         ];
         $options = [
@@ -69,9 +69,10 @@ class Register extends BaseController
 
         // Data yang akan disimpan
         $data1 = array(
-            'username' => $a,
-            'password' => md5($b),
+            'username' => $u,
+            'password' => md5($p),
             'level' => 3,
+            'foto' => 'default.png',
         );
 
         // Simpan data ke dalam database

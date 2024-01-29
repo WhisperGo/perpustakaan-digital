@@ -67,7 +67,7 @@
               </div>
 
               <div class="captcha-container d-flex justify-content-center mt-2">
-                <div class="g-recaptcha" data-sitekey="6LddmYknAAAAANlUht9-WU2ro2nFy9f2JGJemkji" data-callback="onCaptchaVerified"></div>
+                <div class="g-recaptcha" data-sitekey="6LcEfuojAAAAANG5m1V5uLxuVdX1L9ZXYA9XUM9v" data-callback="onCaptchaVerified"></div>
              </div>
 
              <div class="d-flex justify-content-center">

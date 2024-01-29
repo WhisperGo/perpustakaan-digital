@@ -3,11 +3,11 @@
 namespace App\Models;
 use CodeIgniter\Model;
 
-class M_buku extends Model
+class M_koleksi_buku extends Model
 {		
-	protected $table      = 'buku';
-	protected $primaryKey = 'id_buku';
-	protected $allowedFields = ['judul_buku', 'cover_buku', 'kategori_buku'];
+	protected $table      = 'koleksi_buku';
+	protected $primaryKey = 'id_koleksi';
+	protected $allowedFields = ['buku', 'user'];
 	protected $useSoftDeletes = true;
 	protected $useTimestamps = true;
 
@@ -45,54 +45,6 @@ class M_buku extends Model
 		->getResult();
 	}
 
-	// ----------------------------------- STOK BUKU MASUK -------------------------------------
-
-	public function getBukuMasukById($id)
-	{
-		return $this->db->table('buku_masuk')
-		->select('buku_masuk.*, buku.*') 
-		->join('buku', 'buku.id_buku = buku_masuk.buku')
-		->where('buku.id_buku', $id)
-		->get()
-		->getResult();
-	}
-
-
-	public function getBukuMasukByIdBukuMasuk($id)
-	{
-        // Query untuk mengambil data stok buku masuk berdasarkan ID
-		$query = $this->db->table('buku_masuk')
-		->where('id_buku_masuk', $id)
-		->get();
-
-        // Mengembalikan satu baris data stok buku masuk
-		return $query->getRow();
-	}
-
-	// ----------------------------------- STOK BUKU KELUAR -------------------------------------
-
-	public function getBukuKeluarById($id)
-	{
-		return $this->db->table('buku_keluar')
-		->select('buku_keluar.*, buku.*') 
-		->join('buku', 'buku.id_buku = buku_keluar.buku')
-		->where('buku.id_buku', $id)
-		->get()
-		->getResult();
-	}
-
-
-	public function getBukuKeluarByIdBukuMasuk($id)
-	{
-        // Query untuk mengambil data stok buku masuk berdasarkan ID
-		$query = $this->db->table('buku_keluar')
-		->where('id_buku_keluar', $id)
-		->get();
-
-        // Mengembalikan satu baris data stok buku masuk
-		return $query->getRow();
-	}
-
 	// ------------------------------------- PEMINJAM ---------------------------------------------
 
 	public function isLiked($idBuku, $idUser)
@@ -109,7 +61,7 @@ class M_buku extends Model
 		->delete();
 	}
 
-	public function isLikedByIdUser($idUser)
+	public function tampilKoleksiBukuByIdUser($idUser)
 	{
 		return $this->db->table('koleksi_buku')
 		->select('koleksi_buku.*, buku.*, kategori_buku.*')
@@ -120,6 +72,7 @@ class M_buku extends Model
 		->get()
 		->getResult();
 	}
+
 
 	//CI4 Model
 	public function deletee($id)

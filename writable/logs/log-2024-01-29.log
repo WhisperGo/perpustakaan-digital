@@ -187,3 +187,71 @@ CRITICAL - 2024-01-29 12:25:51 --> Call to a member function isValid() on null
 #4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #5 {main}
 ERROR - 2024-01-29 12:37:09 --> Column 'username' cannot be null
+ERROR - 2024-01-29 13:09:42 --> Column 'username' cannot be null
+CRITICAL - 2024-01-29 14:03:11 --> Class 'App\Models\M_koleksi_buku' not found
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Koleksi_buku->index()
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Koleksi_buku))
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#5 {main}
+CRITICAL - 2024-01-29 14:12:17 --> Invalid argument supplied for foreach()
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Views/hopeui/buku/view_peminjam.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', '/Applications/X...', 29, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/vie...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Koleksi_buku.php(27): view('hopeui/buku/vie...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Koleksi_buku->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Koleksi_buku))
+#7 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2024-01-29 14:13:20 --> Invalid file: hopeui/koleksi/view.php
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hopeui/koleksi/...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Common.php(1089): CodeIgniter\View\View->render('hopeui/koleksi/...', Array, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Koleksi_buku.php(27): view('hopeui/koleksi/...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Koleksi_buku->index()
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Koleksi_buku))
+#5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#8 {main}
+CRITICAL - 2024-01-29 14:13:28 --> Invalid argument supplied for foreach()
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Views/hopeui/koleksi_buku/view.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', '/Applications/X...', 29, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/View/View.php(210): include('/Applications/X...')
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Common.php(1089): CodeIgniter\View\View->render('hopeui/koleksi_...', Array, true)
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Koleksi_buku.php(27): view('hopeui/koleksi_...', Array)
+#5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Koleksi_buku->index()
+#6 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Koleksi_buku))
+#7 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#10 {main}
+CRITICAL - 2024-01-29 14:21:40 --> Invalid file: hopeui/buku/view_peminjam.php
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/View/View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('hopeui/buku/vie...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Common.php(1089): CodeIgniter\View\View->render('hopeui/buku/vie...', Array, true)
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Buku.php(388): view('hopeui/buku/vie...', Array)
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Buku->peminjam()
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#7 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#8 {main}
+CRITICAL - 2024-01-29 14:46:28 --> Invalid argument supplied for foreach()
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Buku.php(382): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', '/Applications/X...', 382, Array)
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Buku->peminjam()
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}
+CRITICAL - 2024-01-29 14:55:44 --> Too few arguments to function App\Models\M_buku::tampil(), 0 passed in /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Buku.php on line 381 and exactly 1 expected
+#0 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/app/Controllers/Buku.php(381): App\Models\M_buku->tampil()
+#1 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(832): App\Controllers\Buku->peminjam()
+#2 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Buku))
+#3 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
+#6 {main}

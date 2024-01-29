@@ -165,4 +165,48 @@ $uri = service('uri');
 </div>
 </div>
 
+<!-- ------------------------------- MENU PEMINJAM ------------------------------------- -->
+
+<?php }else if (session()->get('level')==3){ ?>
+  <div class="sidebar-body pt-0 data-scrollbar">
+    <div class="sidebar-list">
+      <!-- Sidebar Menu Start -->
+      <ul class="navbar-nav iq-main-menu" id="sidebar-menu">
+        <li class="nav-item static-item">
+          <a class="nav-link static-item disabled" tabindex="-1">
+            <span class="default-icon">Home</span>
+            <!-- <span class="mini-icon">-</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "dashboard"){echo "active";}?>" href="<?=base_url('dashboard')?>"><i class="faj-button fa-duotone fa-grid-2"></i><span class="item-name">Dashboard</span>
+          </a>
+        </li>
+
+        <li><hr class="hr-horizontal"></li>
+        <li class="nav-item static-item">
+          <a class="nav-link static-item disabled" tabindex="-1">
+            <span class="default-icon">Data Perpustakaan</span>
+            <!-- <span class="mini-icon">-</span> -->
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(2) == "peminjam"){echo "active";}?>" href="<?=base_url('buku/peminjam')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Buku</span>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link <?php if($uri->getSegment(1) == "koleksi_buku"){echo "active";}?>" href="<?=base_url('koleksi_buku')?>"><i class="fa-duotone fa-album-collection"></i><span class="item-name">Koleksi Buku</span>
+          </a>
+        </li>
+
+      </ul>
+    </li>
+
+  </ul>
+</div>
+</div>
+
 <?php } ?>

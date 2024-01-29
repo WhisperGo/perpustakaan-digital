@@ -8,7 +8,7 @@ class Buku extends BaseController
 
     public function index()
     {
-        if (session()->get('level') == 1 || session()->get('level') == 2) {
+        if (session()->get('level') == 1 || session()->get('level') == 2  || session()->get('level') == 3) {
             $model = new M_buku();
 
             $on = 'buku.kategori_buku=kategori_buku.id_kategori';
@@ -342,7 +342,7 @@ class Buku extends BaseController
             $model = new M_buku();
             $model->simpan('buku_keluar', $data1);
 
-           return redirect()->to('buku/info_stok_keluar/' . $a);
+            return redirect()->to('buku/info_stok_keluar/' . $a);
         } else {
             return redirect()->to('/');
         }
@@ -350,23 +350,80 @@ class Buku extends BaseController
 
     public function delete_stok_keluar($id)
     { 
-       if (session()->get('level') == 1 || session()->get('level') == 2) {
-            $model = new M_buku();
+     if (session()->get('level') == 1 || session()->get('level') == 2) {
+        $model = new M_buku();
 
         // Mengambil ID buku terkait dari stok buku masuk yang akan dihapus
-            $stok_keluar = $model->getBukuMasukByIdBukuKeluar($id);
-            $id_buku = $stok_keluar->buku;
+        $stok_keluar = $model->getBukuMasukByIdBukuKeluar($id);
+        $id_buku = $stok_keluar->buku;
 
         // Membuat kondisi untuk menghapus stok buku masuk
-            $where = array('id_buku_keluar' => $id);
-            $model->hapus('buku_keluar', $where);
+        $where = array('id_buku_keluar' => $id);
+        $model->hapus('buku_keluar', $where);
 
         // Mengarahkan kembali ke halaman info_stok dengan ID buku yang diperoleh sebelumnya
             // return redirect()->to('buku');
-            return redirect()->to('buku/info_stok_keluar/' . $id_buku);
-        } else {
-            return redirect()->to('/');
-        }
+        return redirect()->to('buku/info_stok_keluar/' . $id_buku);
+    } else {
+        return redirect()->to('/');
     }
+}
+
+    // -------------------------------------- PEMINJAM --------------------------------------------
+
+public function peminjam()
+{
+    if (session()->get('level') == 3) {
+        $model = new M_buku(); // Gunakan model M_buku
+
+        $idUser = session()->get('id');
+
+        $on = 'buku.kategori_buku=kategori_buku.id_kategori';
+        $data['jojo'] = $model->join2('buku', 'kategori_buku', $on); // Ubah cara Anda mengambil data sesuai kebutuhan
+
+        // Tambahkan informasi apakah buku disukai atau tidak ke dalam data yang akan dikirimkan ke view
+        foreach ($data['jojo'] as $riz) {
+            $riz->isLiked = $model->isLiked($riz->id_buku, $idUser);
+        }
+
+        $data['title'] = 'Data Buku';
+        $data['desc'] = 'Anda dapat melihat Data Buku di Menu ini.';
+
+        echo view('hopeui/partial/header', $data);
+        echo view('hopeui/partial/side_menu');
+        echo view('hopeui/partial/top_menu');
+        echo view('hopeui/buku/view_peminjam', $data);
+        echo view('hopeui/partial/footer');
+    } else {
+        return redirect()->to('/');
+    }
+}
+
+public function aksi_tambah_koleksi($id)
+{ 
+    if(session()->get('level') == 3) {
+        $model = new M_buku();
+
+        $idUser = session()->get('id');
+
+            // Periksa apakah buku sudah ada dalam koleksi pengguna atau belum
+        if (!$model->isLiked($id, $idUser)) {
+            // Jika belum, tambahkan buku ke dalam koleksi
+            $data1 = array(
+                'buku' => $id,
+                'user' => $idUser
+            );
+            $model->simpan('koleksi_buku', $data1);
+        } else {
+            // Jika sudah, hapus buku dari koleksi
+            $model->hapusLike($id, $idUser);
+        }
+
+        // Arahkan pengguna kembali ke halaman koleksi buku
+        return redirect()->to('buku/peminjam');
+    } else {
+        return redirect()->to('/');
+    }
+}
 
 }

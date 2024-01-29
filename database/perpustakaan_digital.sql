@@ -2,9 +2,9 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Waktu pembuatan: 28 Jan 2024 pada 19.52
--- Versi server: 10.4.24-MariaDB
+-- Host: localhost
+-- Waktu pembuatan: 29 Jan 2024 pada 08.59
+-- Versi server: 10.4.21-MariaDB
 -- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -161,8 +161,8 @@ INSERT INTO `kategori_buku` (`id_kategori`, `nama_kategori`, `deskripsi_kategori
 --
 
 CREATE TABLE `koleksi_buku` (
-  `id_like` int(11) NOT NULL,
-  `gambar` int(11) NOT NULL,
+  `id_koleksi` int(11) NOT NULL,
+  `buku` int(11) NOT NULL,
   `user` int(11) NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
@@ -342,7 +342,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `username`, `password`, `level`, `foto`, `created_at`, `updated_at`, `deleted_at`) VALUES
 (1, 'Admin', 'c4ca4238a0b923820dcc509a6f75849b', 1, 'default.png', '2024-01-22 22:26:01', NULL, NULL),
 (2, 'Petugas', 'c4ca4238a0b923820dcc509a6f75849b', 2, 'default.png', '2024-01-22 22:26:01', NULL, NULL),
-(3, 'Peminjam', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', '2024-01-22 22:26:01', NULL, NULL);
+(3, 'Peminjam', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', '2024-01-22 22:26:01', NULL, NULL),
+(5, 'Tes', 'c4ca4238a0b923820dcc509a6f75849b', 3, 'default.png', '2024-01-29 13:12:31', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -406,7 +407,7 @@ ALTER TABLE `kategori_buku`
 -- Indeks untuk tabel `koleksi_buku`
 --
 ALTER TABLE `koleksi_buku`
-  ADD PRIMARY KEY (`id_like`);
+  ADD PRIMARY KEY (`id_koleksi`);
 
 --
 -- Indeks untuk tabel `level`
@@ -482,7 +483,7 @@ ALTER TABLE `kategori_buku`
 -- AUTO_INCREMENT untuk tabel `koleksi_buku`
 --
 ALTER TABLE `koleksi_buku`
-  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_koleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `level`
@@ -518,7 +519,7 @@ ALTER TABLE `ulasan_buku`
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `website`
