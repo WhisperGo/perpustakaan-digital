@@ -38,6 +38,12 @@
 
   <!-- Flatpickr css -->
   <link rel="stylesheet" href="<?=base_url('assets/vendor/flatpickr/dist/flatpickr.min.css')?>" />
+
+  <!-- File Uploader -->
+  <link rel="stylesheet" href="<?=base_url('assets/extensions/filepond/filepond.css')?>" />
+  <link rel="stylesheet" href="<?=base_url('assets/extensions/filepond-plugin-image-preview/filepond-plugin-image-preview.css')?>"
+  />
+
   
   
 </head>

@@ -15,10 +15,21 @@ class M_user extends Model
 	{
 		return $this->db->table($table1)->get()->getResult();
 	}
-
+	public function simpan($table, $data)
+	{
+		return $this->db->table($table)->insert($data);
+	}
 	public function qedit($table, $data, $where)
 	{
 		return $this->db->table($table)->update($data, $where);
+	}
+	public function getWhere($table, $where)
+	{
+		return $this->db->table($table)->getWhere($where)->getRow();
+	}
+	public function getWhere2($table, $where)
+	{
+		return $this->db->table($table)->getWhere($where)->getRowArray();
 	}
 	public function join2($table1, $table2, $on)
 	{

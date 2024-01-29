@@ -35,6 +35,8 @@ class User extends BaseController
             $data['desc']='Anda dapat tambah Data User di Menu ini.'; 
             $data['subtitle'] = 'Tambah Data User';
 
+            $data['level']=$model->tampil('level');
+
             echo view('hopeui/partial/header', $data);
             echo view('hopeui/partial/side_menu');
             echo view('hopeui/partial/top_menu');
@@ -52,11 +54,24 @@ class User extends BaseController
             $b = $this->request->getPost('password');
             $c = $this->request->getPost('level');
 
+            $foto_profil = $this->request->getFile('foto_profil');
+
+            if ($foto_profil->isValid() && !$foto_profil->hasMoved()) {
+                $ext = $foto_profil->getClientExtension();
+
+                $imageName = 'profile_' . session()->get('id') . '_' . time() . '.' . $ext;
+
+                $foto_profil->move('profile', $imageName);
+            } else {
+                $imageName = 'default.png';
+            }
+
             // Data yang akan disimpan
             $data1 = array(
                 'username' => $a,
                 'password' => md5($b),
-                'level' => $c
+                'level' => $c,
+                'foto' => $imageName
             );
 
             // Simpan data ke dalam database
@@ -69,24 +84,62 @@ class User extends BaseController
         }
     }
 
-    public function aksi_edit($id)
+    public function edit($id)
+    { 
+        if (session()->get('level') == 1) {
+            $model=new M_user();
+            $where=array('id_user'=>$id);
+            $data['jojo']=$model->getWhere('user',$where);
+
+            $data['title'] = 'Data User';
+            $data['desc'] = 'Anda dapat mengedit Data User di Menu ini.';      
+            $data['subtitle'] = 'Edit Data User';  
+
+            $data['level'] = $model->tampil('level');
+
+            echo view('hopeui/partial/header', $data);
+            echo view('hopeui/partial/side_menu');
+            echo view('hopeui/partial/top_menu');
+            echo view('hopeui/user/edit', $data);
+            echo view('hopeui/partial/footer');
+        }else {
+            return redirect()->to('/');
+        }
+    }
+
+    public function aksi_edit()
     {
         if (session()->get('level') == 1) {
+            $a = $this->request->getPost('username');
+            $b = $this->request->getPost('password');
+            $c = $this->request->getPost('level');
+            $id = $this->request->getPost('id');
+
+            $foto_profil = $this->request->getFile('foto_profil');
+
+            if ($foto_profil->isValid() && !$foto_profil->hasMoved()) {
+                $ext = $foto_profil->getClientExtension();
+
+                $imageName = 'profile_' . $a . '_' . time() . '.' . $ext;
+
+                $foto_profil->move('profile', $imageName);
+            } else {
+                $imageName = $this->request->getPost('old_foto');
+            }
 
             // Data yang akan disimpan
             $data1 = array(
-                'status_peminjaman' => '2',
+                'username' => $a,
+                'level' => $c,
+                'foto' => $imageName
             );
 
-            $where = array('id_peminjaman' => $id);
+            // Simpan data ke dalam database
             $model = new M_user();
+            $where=array('id_user'=>$id);
+            $model->qedit('user', $data1, $where);
 
-            $stok_keluar = $model->getBukuByIdPeminjaman($id);
-            $id_buku = $stok_keluar->buku;
-
-            $model->qedit('peminjaman', $data1, $where);
-
-            return redirect()->to('peminjaman/menu_peminjaman/' . $id_buku);
+            return redirect()->to('user');
         } else {
             return redirect()->to('/');
         }
@@ -94,16 +147,10 @@ class User extends BaseController
 
     public function delete($id)
     { 
-        if (session()->get('level') == 1) {
+        if(session()->get('level')== 1) {
             $model=new M_user();
-
-            $stok_keluar = $model->getBukuByIdPeminjaman($id);
-            $id_buku = $stok_keluar->buku;
-
-            $where = array('id_peminjaman' => $id);
-            $model->hapus('peminjaman', $where);
-
-            return redirect()->to('peminjaman/menu_peminjaman/' . $id_buku);
+            $model->deletee($id);
+            return redirect()->to('user');
         }else {
             return redirect()->to('/');
         }

@@ -9,7 +9,7 @@
             </div>
             <div class="card-body">
                <div class="new-user-info">
-                  <form action="<?= base_url('user/aksi_create')?>" method="post">
+                  <form action="<?= base_url('user/aksi_create')?>" method="post" enctype="multipart/form-data">
                      <div class="row">
 
                         <div class="form-group" style="margin-bottom: 6px; margin-top: 6px;">
@@ -25,7 +25,7 @@
                         <div class="form-group">
                            <label for="password" class="form-label" style="flex: 1;">Password</label>
                             <div style="position: relative; flex: 1;">
-                              <input type="password" class="form-control" id="password-input" placeholder="Masukkan Password" name="password">
+                              <input type="password" class="form-control" id="password-input" placeholder="Masukkan Password" name="password" required>
                               <button type="button" class="btn btn-outline-primary" id="show-password-btn" style="position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
                                 <i class="fa-solid fa-eye"></i>
                              </button>
