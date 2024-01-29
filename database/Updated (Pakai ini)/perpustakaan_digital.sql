@@ -2,9 +2,9 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Waktu pembuatan: 29 Jan 2024 pada 08.59
--- Versi server: 10.4.21-MariaDB
+-- Host: 127.0.0.1
+-- Waktu pembuatan: 29 Jan 2024 pada 15.48
+-- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -169,6 +169,13 @@ CREATE TABLE `koleksi_buku` (
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `koleksi_buku`
+--
+
+INSERT INTO `koleksi_buku` (`id_koleksi`, `buku`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(6, 1, 3, '2024-01-29 20:55:41', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -191,30 +198,6 @@ INSERT INTO `level` (`id_level`, `nama_level`, `created_at`, `updated_at`, `dele
 (1, 'Administrator', '2024-01-22 22:25:19', NULL, NULL),
 (2, 'Petugas', '2024-01-27 13:43:11', NULL, NULL),
 (3, 'Peminjam', '2024-01-27 13:43:11', NULL, NULL);
-
--- --------------------------------------------------------
-
---
--- Struktur dari tabel `peminjam`
---
-
-CREATE TABLE `peminjam` (
-  `id_peminjam` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `jk` int(11) NOT NULL,
-  `no_telepon` varchar(15) NOT NULL,
-  `user` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime DEFAULT NULL,
-  `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `peminjam`
---
-
-INSERT INTO `peminjam` (`id_peminjam`, `nama`, `jk`, `no_telepon`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Peminjam', 1, '02456', 3, '2024-01-28 13:59:42', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -281,42 +264,27 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `petugas`
---
-
-CREATE TABLE `petugas` (
-  `id_petugas` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `jk` int(11) NOT NULL,
-  `no_telepon` varchar(15) NOT NULL,
-  `user` int(11) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp(),
-  `updated_at` datetime DEFAULT NULL,
-  `deleted_at` datetime DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data untuk tabel `petugas`
---
-
-INSERT INTO `petugas` (`id_petugas`, `nama`, `jk`, `no_telepon`, `user`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Petugas', 1, '08754', 2, '2024-01-28 13:58:47', NULL, NULL);
-
--- --------------------------------------------------------
-
---
 -- Struktur dari tabel `ulasan_buku`
 --
 
 CREATE TABLE `ulasan_buku` (
-  `id_komentar` int(11) NOT NULL,
-  `gambar` int(11) NOT NULL,
+  `id_ulasan` int(11) NOT NULL,
+  `buku` int(11) NOT NULL,
   `user` int(11) NOT NULL,
-  `isi_komentar` text NOT NULL,
+  `ulasan` text NOT NULL,
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` datetime DEFAULT NULL,
   `deleted_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `ulasan_buku`
+--
+
+INSERT INTO `ulasan_buku` (`id_ulasan`, `buku`, `user`, `ulasan`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 1, 3, 'Bagus banget bukunya wajib dibaca nih!', '2024-01-29 21:20:07', NULL, NULL),
+(3, 1, 2, 'Kurang puas, butuh kelanjutan!', '2024-01-29 21:20:07', NULL, NULL),
+(4, 1, 1, 'Bintang 5 pokoknya!', '2024-01-29 21:20:07', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -416,28 +384,16 @@ ALTER TABLE `level`
   ADD PRIMARY KEY (`id_level`);
 
 --
--- Indeks untuk tabel `peminjam`
---
-ALTER TABLE `peminjam`
-  ADD PRIMARY KEY (`id_peminjam`);
-
---
 -- Indeks untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
   ADD PRIMARY KEY (`id_peminjaman`);
 
 --
--- Indeks untuk tabel `petugas`
---
-ALTER TABLE `petugas`
-  ADD PRIMARY KEY (`id_petugas`);
-
---
 -- Indeks untuk tabel `ulasan_buku`
 --
 ALTER TABLE `ulasan_buku`
-  ADD PRIMARY KEY (`id_komentar`);
+  ADD PRIMARY KEY (`id_ulasan`);
 
 --
 -- Indeks untuk tabel `user`
@@ -483,7 +439,7 @@ ALTER TABLE `kategori_buku`
 -- AUTO_INCREMENT untuk tabel `koleksi_buku`
 --
 ALTER TABLE `koleksi_buku`
-  MODIFY `id_koleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_koleksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT untuk tabel `level`
@@ -492,28 +448,16 @@ ALTER TABLE `level`
   MODIFY `id_level` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT untuk tabel `peminjam`
---
-ALTER TABLE `peminjam`
-  MODIFY `id_peminjam` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT untuk tabel `peminjaman`
 --
 ALTER TABLE `peminjaman`
   MODIFY `id_peminjaman` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT untuk tabel `petugas`
---
-ALTER TABLE `petugas`
-  MODIFY `id_petugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT untuk tabel `ulasan_buku`
 --
 ALTER TABLE `ulasan_buku`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_ulasan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
