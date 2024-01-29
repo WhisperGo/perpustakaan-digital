@@ -51,3 +51,17 @@ CRITICAL - 2024-01-29 01:47:50 --> count(): Parameter must be an array or an obj
 #5 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #6 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #7 {main}
+CRITICAL - 2024-01-29 10:32:31 --> Too few arguments to function App\Controllers\User::create(), 0 passed in C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\User->create()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2024-01-29 10:38:17 --> Class 'App\Controllers\M_peminjaman' not found
+#0 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\User->create()
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#5 {main}
