@@ -255,3 +255,14 @@ CRITICAL - 2024-01-29 14:55:44 --> Too few arguments to function App\Models\M_bu
 #4 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #5 /Applications/XAMPP/xamppfiles/htdocs/perpustakaan-digital/system/Commands/Server/rewrite.php(43): require_once('/Applications/X...')
 #6 {main}
+ERROR - 2024-01-29 18:14:47 --> Unknown column 'buku' in 'where clause'
+ERROR - 2024-01-29 18:14:47 --> Unknown column 'buku' in 'where clause'
+ERROR - 2024-01-29 18:14:50 --> Unknown column 'koleksi_buku.buku' in 'on clause'
+CRITICAL - 2024-01-29 18:14:50 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\perpustakaan-digital\app\Controllers\Koleksi_buku.php(16): App\Models\M_koleksi_buku->tampilKoleksiBukuByIdUser('3')
+#1 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(832): App\Controllers\Koleksi_buku->index()
+#2 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Koleksi_buku))
+#3 C:\xampp\htdocs\perpustakaan-digital\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\perpustakaan-digital\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\perpustakaan-digital\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

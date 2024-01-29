@@ -149,7 +149,7 @@ $uri = service('uri');
         </li>
 
         <li class="nav-item">
-          <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
+          <a class="nav-link <?php if($uri->getSegment(1) == "peminjaman" && $uri->getSegment(2) !== "menu_laporan"){echo "active";}?>" href="<?=base_url('peminjaman')?>"><i class="fa-duotone fa-arrow-right-arrow-left"></i><span class="item-name">Data Peminjaman</span>
           </a>
         </li>
 

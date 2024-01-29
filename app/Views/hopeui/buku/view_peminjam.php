@@ -39,7 +39,7 @@
                         <td><?= $riz->nama_kategori ?></td>
                         <td><?= $riz->stok_buku ?> buah</td>
                         <td>
-                           <a href="<?php echo base_url('ulasan_buku'. $riz->id_buku)?>" class="btn btn-primary my-1"><i class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i></a>
+                           <a href="<?php echo base_url('ulasan_buku/'. $riz->id_buku)?>" class="btn btn-primary my-1"><i class="fa-regular fa-magnifying-glass" style="color: #ffffff;"></i></a>
 
                            <?php if ($riz->isLiked): ?>
                               <a href="<?php echo base_url('buku/aksi_tambah_koleksi/'. $riz->id_buku)?>" class="btn btn-danger my-1"><i class="fa-solid fa-heart"></i></a>
