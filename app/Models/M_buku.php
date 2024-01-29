@@ -44,6 +44,7 @@ class M_buku extends Model
 		->get()
 		->getResult();
 	}
+	
 
 	// ----------------------------------- STOK BUKU MASUK -------------------------------------
 
