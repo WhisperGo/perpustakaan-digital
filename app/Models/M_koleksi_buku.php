@@ -69,6 +69,7 @@ class M_koleksi_buku extends Model
 		->join('kategori_buku', 'kategori_buku.id_kategori = buku.kategori_buku')
 		->where('koleksi_buku.user', $idUser)
 		->where('koleksi_buku.deleted_at', null)
+		->orderBy('koleksi_buku.created_at', 'DESC')
 		->get()
 		->getResult();
 	}

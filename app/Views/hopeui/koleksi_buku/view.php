@@ -19,6 +19,7 @@
                            <th>Cover Buku</th>
                            <th>Kategori Buku</th>
                            <th>Stok Buku</th>
+                           <th>Baca Online</th>
                            <th>Action</th>
                         </tr>
                      </thead>
@@ -27,29 +28,36 @@
                         <?php
                         $no=1;
                         foreach ($jojo as $riz) {
-                          ?>
-                          <tr>
-                            <td><?= $no++ ?></td>
-                            <td><?= $riz->judul_buku ?></td>
-                            <td>
-                             <a href="<?= base_url('cover/' . $riz->cover_buku) ?>" target="_blank">
+                         ?>
+                         <tr>
+                          <td><?= $no++ ?></td>
+                          <td><?= $riz->judul_buku ?></td>
+                          <td>
+                            <a href="<?= base_url('cover/' . $riz->cover_buku) ?>" target="_blank">
                               <img src="<?= base_url('cover/' . $riz->cover_buku) ?>" class="img-fluid" style="object-fit: cover; width: 95px; height: 140px;" alt="Cover Buku">
                            </a>
                         </td>
                         <td><?= $riz->nama_kategori ?></td>
                         <td><?= $riz->stok_buku ?> buah</td>
+                        <td> 
+                           <?php if ($riz->nama_kategori == 'Buku Digital') : ?>
+                              <a href="<?= base_url('file_buku/' . $riz->file_buku) ?>" target="_blank" class="btn btn-secondary my-1"><i class="fa-brands fa-readme"></i></a>
+                           <?php else: ?>
+                              Tidak Tersedia
+                           <?php endif; ?>
+                        </td>
                         <td>
                            <a href="<?php echo base_url('ulasan_buku/'. $riz->id_buku)?>" class="btn btn-primary my-1"><i class="fa-regular fa-comment" style="color: #ffffff;"></i></a>
 
                            <?php if ($isLiked[$riz->id_buku]): ?>
-                             <a href="<?php echo base_url('koleksi_buku/aksi_tambah_koleksi/'. $riz->id_buku)?>" class="btn btn-danger my-1"><i class="fa-solid fa-heart"></i></a>
-                          <?php else: ?>
+                            <a href="<?php echo base_url('koleksi_buku/aksi_tambah_koleksi/'. $riz->id_buku)?>" class="btn btn-danger my-1"><i class="fa-solid fa-heart"></i></a>
+                         <?php else: ?>
                            <a href="<?php echo base_url('koleksi_buku/aksi_tambah_koleksi/'. $riz->id_buku)?>" class="btn btn-success my-1"><i class="fa-regular fa-heart"></i></a>
-                          <?php endif; ?>
-                       </td>
-                    </tr>
-                 <?php } ?>
-              </tbody>
+                        <?php endif; ?>
+                     </td>
+                  </tr>
+               <?php } ?>
+            </tbody>
               <!--  <tfoot>
                   <tr>
                      <th>No.</th>

@@ -75,6 +75,7 @@ class M_ulasan_buku extends Model
 		->join('user', 'ulasan_buku.user = user.id_user')
 		->where('ulasan_buku.buku', $id)
 		->where('ulasan_buku.deleted_at', null)
+		->orderBy('ulasan_buku.created_at', 'DESC')
 		->get()
 		->getResult();
 	}
